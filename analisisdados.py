@@ -1,5 +1,6 @@
 import random
 import matplotlib.pyplot as plt
+import csv
 
 def main(numero_de_intentos):
     tiros = []
@@ -57,6 +58,12 @@ def main(numero_de_intentos):
     prob_11 = suma_11 / numero_de_intentos
     prob_12 = suma_12 / numero_de_intentos
 
+
+    probabilidades = [prob_2, prob_3, prob_4, prob_5, prob_6, prob_7, prob_8, prob_9, prob_10, prob_11, prob_12]
+    
+    # Guardar probabilidades en CSV
+    guardar_probabilidades_en_csv(probabilidades)
+
     print(f'Probabilidad de obtener un 7 con DOS dados en {numero_de_intentos} tiros es = {prob_7}')
     print(f'Probabilidad de obtener un 9 con DOS dados en {numero_de_intentos} tiros es = {prob_9}')
 
@@ -64,6 +71,11 @@ def main(numero_de_intentos):
     x=[2,3,4,5,6,7,8,9,10,11,12]
     plt.plot(x,y, 'bs-')
     print(plt.show())
+
+def guardar_probabilidades_en_csv(probabilidades, nombre_archivo='basedados.csv'):
+    with open(nombre_archivo, 'a', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(probabilidades)
 
 if __name__ == '__main__':
     numero_de_intentos = int(input('Cuantas veces correra la simulacion: '))
