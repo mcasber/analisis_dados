@@ -2,6 +2,7 @@ import random
 import csv
 import matplotlib.pyplot as plt
 
+
 def main(numero_de_intentos):
     tiros = []
     
