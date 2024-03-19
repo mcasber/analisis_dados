@@ -14,7 +14,7 @@ df = pd.read_csv('C:\\Users\\Mariano\\basedados.csv',sep=",",header=0)
 #print(df2)
 
 
-df['suma'] = df.apply (lambda x : x['2']+x['3']+x['4']+x['5']+x['6']+x['7']+x['8']+x['9']+x['10']+x['11']+x['12'], axis=1)
+#df['suma'] = df.apply (lambda x : x['2']+x['3']+x['4']+x['5']+x['6']+x['7']+x['8']+x['9']+x['10']+x['11']+x['12'], axis=1)
 #print(df.head())
 print(df.describe())
 
