@@ -2,8 +2,11 @@ import pandas as pd
 import numpy as np 
 import seaborn as sns
 import matplotlib.pyplot as plt
+from analisisdados import ruta
 
-df = pd.read_csv('C:\\Users\\Mariano\\basedados.csv',sep=",",header=0)
+#df = pd.read_csv('C:\\Users\\Mariano\\Desktop\\dados\\archivos\\basedados.csv',sep=",",header=0)#pasarlo a ruta relativa
+
+df = pd.read_csv(ruta,sep=",",header=0)
 
 #print(df.info())
 #print(df.head())         

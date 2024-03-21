@@ -1,7 +1,10 @@
 import random
 import csv
 import matplotlib.pyplot as plt
+import os
 
+BASE_DIR = os.path.dirname((os.path.abspath(__file__)))
+ruta = os.path.join(BASE_DIR, 'archivos', 'basedados.csv')
 
 def main(numero_de_intentos):
     tiros = []
@@ -64,7 +67,7 @@ def main(numero_de_intentos):
     x=[2,3,4,5,6,7,8,9,10,11,12]#creo las referencia del eje x para el grafico
     
     #Guardar probabilidades en CSV
-    guardar_probabilidades_en_csv(probabilidades)
+    guardar_probabilidades_en_csv(probabilidades,ruta)
 
     print(f'Probabilidad de obtener un 7 con DOS dados en {numero_de_intentos} tiros es = {prob_7}')
         
