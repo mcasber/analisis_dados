@@ -62,7 +62,6 @@ def main(numero_de_intentos):
     prob_11 = suma_11 / numero_de_intentos
     prob_12 = suma_12 / numero_de_intentos
 
-
     probabilidades = [prob_2, prob_3, prob_4, prob_5, prob_6, prob_7, prob_8, prob_9, prob_10, prob_11, prob_12]
     x=[2,3,4,5,6,7,8,9,10,11,12]#creo las referencia del eje x para el grafico
     
